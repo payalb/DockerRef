@@ -40,3 +40,5 @@ We can access any ip address, due to docker swarm routing mesh, it would be navi
 
 Can use hystrix to prevent failover.
 If one container down, will automatically start
+
+All micro-services should be running on one port to prevent confusion.
