@@ -34,6 +34,9 @@ To see all servcies: docker service ls
 Services are resilient to failures compared to containers.
 
 docker service logs -f app
+
+docker swarm join-token manager
+docker swarm join-token worker
 You can check container logs on the container only on which service is running.
 
 docker does not distinguishes between healthy and non-healthy container. Hence should use EC2 load balancers,
