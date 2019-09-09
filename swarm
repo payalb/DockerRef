@@ -3,7 +3,7 @@ Open up ports for docker swarm
 7946: tcp/udp for communication among nodes
 4789: udp: for overlay network traffic
 
-save. Then change anywhere to it's own security group
+save. Then change anywhere to it's own security group: so open to other instances on same security group only.
 dockersamples/docker-swarm-visualizer
 
 docker run -d -p 5000:8080 -v /var/run/docker.sock:/var/run/docker.sock dockersamples/visualizer
