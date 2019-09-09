@@ -6,9 +6,32 @@ Open up ports for docker swarm
 save. Then change anywhere to it's own security group: so open to other instances on same security group only.
 http: 80
 ssh 22
+
+login to all ec2 instances: 3 manager nodes, 2 workr nodes
+
+copy docker-compose.yaml on 1 instance
+
+docker network create -d overlay --subnet 192.168.10.0/24 n1 : 
+
+networks:
+   n1:
+     ipam:
+       config: 
+         - subnet: 172.28.0.0/16
+
 dockersamples/docker-swarm-visualizer
 
 docker run -d -p 5000:8080 -v /var/run/docker.sock:/var/run/docker.sock dockersamples/visualizer
 
+For this ec2 instance, export 5000 port too.
+
+docker stack deploy -c docker-compose.yaml stack1
+
+To see all servcies: docker service ls
+
+Services are resilient to failures compared to containers.
+
+docker service logs -f app
+You can check container logs on the container only on which service is running.
 
 docker does not distinguishes between healthy and non-healthy container. Hence should use EC2 load balancers,
