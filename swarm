@@ -38,4 +38,5 @@ docker does not distinguishes between healthy and non-healthy container. Hence s
 
 We can access any ip address, due to docker swarm routing mesh, it would be navigated to proper container.
 
+Can use hystrix to prevent failover.
 If one container down, will automatically start
