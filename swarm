@@ -37,3 +37,5 @@ You can check container logs on the container only on which service is running.
 docker does not distinguishes between healthy and non-healthy container. Hence should use EC2 load balancers,
 
 We can access any ip address, due to docker swarm routing mesh, it would be navigated to proper container.
+
+If one container down, will automatically start
