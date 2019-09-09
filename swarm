@@ -1,0 +1,7 @@
+Open up ports for docker swarm
+7946: tcp/udp
+4789: udp
+
+dockersamples/docker-swarm-visualizer
+
+docker run -d -p 5000:8080 -v /var/run/docker.sock:/var/run/docker.sock dockersamples/visualizer
