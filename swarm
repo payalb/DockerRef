@@ -1,5 +1,5 @@
 Open up ports for docker swarm
-2377: tcp for cluter management communications
+2377: tcp for cluter management communications: anywhere
 7946: tcp/udp for communication among nodes
 4789: udp: for overlay network traffic
 
