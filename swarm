@@ -1,3 +1,5 @@
+ec2: install docker: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
+
 Open up ports for docker swarm
 2377: tcp for cluter management communications: anywhere
 7946: tcp/udp for communication among nodes
