@@ -15,7 +15,7 @@ iptables -I INPUT 1 -p tcp --dport 2377 -j ACCEPT
 iptables -I INPUT 1 -p tcp --dport 7946 -j ACCEPT
 iptables -I INPUT 1 -p udp --dport 7946 -j ACCEPT
 iptables -I INPUT 1 -p udp --dport 4789 -j ACCEPT
-
+service iptables save
 
 login to all ec2 instances: 3 manager nodes, 2 workr nodes
 
