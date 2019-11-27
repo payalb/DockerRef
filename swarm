@@ -9,6 +9,14 @@ save. Then change anywhere to it's own security group: so open to other instance
 http: 80
 ssh 22
 
+
+iptables -I INPUT 1 -p tcp --dport 2376 -j ACCEPT
+iptables -I INPUT 1 -p tcp --dport 2377 -j ACCEPT
+iptables -I INPUT 1 -p tcp --dport 7946 -j ACCEPT
+iptables -I INPUT 1 -p udp --dport 7946 -j ACCEPT
+iptables -I INPUT 1 -p udp --dport 4789 -j ACCEPT
+
+
 login to all ec2 instances: 3 manager nodes, 2 workr nodes
 
 copy docker-compose.yaml on 1 instance
